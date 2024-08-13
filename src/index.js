@@ -19,7 +19,10 @@ module.exports = function toReadable (number) {
         if (number.toString()[2] == 0 && number.toString()[1] == 0) {
             final = numberArr4[number.toString()[0] - 1];
         }
-        if (number.toString()[2] > 1 && number.toString()[1] !== 0) {
+        if (number.toString()[1] > 1 && number.toString()[2] == 0) {
+            final = `${numberArr4[number.toString()[0] - 1]} ${numberArr3[number.toString()[1]]}`;
+        }
+        if (number.toString()[2] >= 1 && number.toString()[1] !== 0) {
             final = `${numberArr4[number.toString()[0] - 1]} ${numberArr3[number.toString()[1]]} ${numberArr[number.toString()[2]]}`;
         }
         if (number.toString()[1] == 1) {
